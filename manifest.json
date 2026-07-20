@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Sub-Sucker Zero",
+  "version": "2.0",
+  "description": "Advanced extraction of YouTube subscriptions with Abyss Auto-Scroll, Visual Telemetry, and Target Locating.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://*.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

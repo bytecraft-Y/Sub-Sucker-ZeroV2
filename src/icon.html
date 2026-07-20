@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exorcist Icon Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        background: #05050a;
+        color: #39ff14;
+      }
+      button {
+        padding: 15px 30px;
+        font-size: 18px;
+        cursor: pointer;
+        background: #39ff14;
+        color: #05050a;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      button:hover {
+        box-shadow: 0 0 15px #39ff14;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>The YouTube Exorcist - Icon Generator</h2>
+    <p>Click the button below to forge your 3 PNG icons.</p>
+    <button onclick="downloadIcons()">Forge Icons</button>
+
+    <script>
+      const svgCode = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128"><rect width="128" height="128" rx="24" fill="#05050a" stroke="#39ff14" stroke-width="4"/><path d="M64 15 L64 75 M40 55 L64 79 L88 55" stroke="#39ff14" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0px 0px 8px #39ff14)"/><path d="M44 85 H84 V105 H74 V113 H54 V105 H44 Z" fill="#39ff14" opacity="0.8"/><circle cx="54" cy="95" r="4" fill="#05050a" /><circle cx="74" cy="95" r="4" fill="#05050a" /></svg>`;
+
+      function downloadIcons() {
+        const sizes = [16, 48, 128];
+
+        sizes.forEach((size, index) => {
+          setTimeout(() => {
+            const canvas = document.createElement("canvas");
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext("2d");
+
+            const img = new Image();
+            img.onload = () => {
+              ctx.drawImage(img, 0, 0, size, size);
+              const link = document.createElement("a");
+              link.download = `icon${size}.png`;
+              link.href = canvas.toDataURL("image/png");
+              link.click();
+            };
+            img.src = "data:image/svg+xml;base64," + btoa(svgCode);
+          }, index * 300);
+        });
+      }
+    </script>
+  </body>
+</html>

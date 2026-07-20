@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        width: 250px;
+        font-family: "Courier New", Courier, monospace;
+        background-color: #05050a;
+        color: #fff;
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+      }
+      .icon-container {
+        margin: 0 auto 10px auto;
+        width: 90px;
+        height: 90px;
+      }
+      h3 {
+        margin: 0 0 15px 0;
+        font-size: 16px;
+        color: #ff007f;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      button {
+        width: 100%;
+        border: none;
+        padding: 12px;
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        margin-bottom: 10px;
+      }
+
+      #scroll-btn {
+        background: #111;
+        color: #7000ff;
+        border: 1px solid #7000ff;
+      }
+      #scroll-btn:hover {
+        background: #7000ff;
+        color: #fff;
+        box-shadow: 0 0 15px #7000ff;
+      }
+
+      #extract-btn {
+        background: linear-gradient(45deg, #7000ff, #ff007f);
+        color: white;
+      }
+      #extract-btn:hover {
+        box-shadow: 0 0 15px #ff007f;
+        transform: scale(1.02);
+      }
+
+      .note {
+        font-size: 11px;
+        color: #888;
+        margin-top: 5px;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icon-container">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 128 128"
+        width="100%"
+        height="100%"
+      >
+        <rect width="128" height="128" rx="24" fill="#05050a" />
+        <circle
+          cx="64"
+          cy="64"
+          r="45"
+          fill="none"
+          stroke="#ff007f"
+          stroke-width="6"
+          stroke-dasharray="20 10"
+          stroke-linecap="round"
+        />
+        <circle
+          cx="64"
+          cy="64"
+          r="30"
+          fill="none"
+          stroke="#7000ff"
+          stroke-width="6"
+          stroke-dasharray="15 8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M54 49 L84 64 L54 79 Z"
+          fill="#fff"
+          filter="drop-shadow(0px 0px 12px #ff007f)"
+        />
+      </svg>
+    </div>
+
+    <h3>Sub-Sucker Zero</h3>
+
+    <button id="scroll-btn">Dive The Abyss (Auto-Scroll)</button>
+    <button id="extract-btn">Initiate Extraction</button>
+
+    <p class="note">
+      <strong>STEP 1:</strong> Dive the Abyss to load all channels.<br /><strong
+        >STEP 2:</strong
+      >
+      Initiate Extraction.
+    </p>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

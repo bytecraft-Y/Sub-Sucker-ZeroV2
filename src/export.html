@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sub-Sucker-Zero-Extraction</title>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        margin: 40px;
+        background: #05050a;
+        color: #fff;
+      }
+      h1 {
+        color: #ff007f;
+        border-bottom: 2px dashed #7000ff;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      .top-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .meta {
+        color: #aaa;
+        font-size: 14px;
+      }
+      .highlight {
+        color: #7000ff;
+        font-weight: bold;
+      }
+
+      #search-bar {
+        padding: 12px;
+        width: 300px;
+        background: #111;
+        border: 1px solid #7000ff;
+        color: #39ff14;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        border-radius: 4px;
+        outline: none;
+      }
+      #search-bar:focus {
+        box-shadow: 0 0 10px #7000ff;
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .export-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      #print-action-btn {
+        background: linear-gradient(45deg, #7000ff, #ff007f);
+        color: white;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th {
+        background-color: #111;
+        padding: 12px;
+        text-align: left;
+        border-bottom: 2px solid #7000ff;
+        color: #ff007f;
+        text-transform: uppercase;
+      }
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #222;
+        vertical-align: middle;
+      }
+      .id-col {
+        width: 60px;
+        color: #ff007f;
+      }
+      .avatar-col {
+        width: 50px;
+        text-align: center;
+      }
+      .avatar-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #7000ff;
+      }
+      .name-col {
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .link-col {
+        text-align: right;
+        width: 100px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: #ff007f;
+        text-shadow: 0 0 8px #ff007f;
+      }
+      .action-link {
+        color: #7000ff;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          margin: 20px;
+          background: white;
+          color: black;
+        }
+        h1 {
+          color: black;
+          border-bottom: 2px solid black;
+        }
+        th {
+          background-color: #eee;
+          color: black;
+          border-bottom: 2px solid black;
+        }
+        td {
+          border-bottom: 1px solid #ccc;
+          color: black !important;
+        }
+        a {
+          color: black !important;
+          text-decoration: none;
+        }
+        .action-link {
+          color: #555 !important;
+        }
+        .id-col,
+        .highlight {
+          color: black;
+        }
+        /* Hide UI elements from the printed document */
+        .btn-group,
+        #search-bar {
+          display: none;
+        }
+        .avatar-img {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sub-Sucker Zero // Extraction Report</h1>
+
+    <div class="top-panel">
+      <div class="meta" id="meta-info">Loading...</div>
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="LOCATE TARGET..."
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="btn-group">
+      <button class="export-btn" id="print-action-btn">Export to PDF</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 60px">ID</th>
+          <th style="width: 50px">VISUAL</th>
+          <th>Entity Name</th>
+          <th style="text-align: right">Portal</th>
+        </tr>
+      </thead>
+      <tbody id="channel-list"></tbody>
+    </table>
+
+    <script src="export.js"></script>
+  </body>
+</html>
