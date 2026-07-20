@@ -36,4 +36,4 @@ Standard YouTube APIs severely limit how you can interact with your own subscrip
 *   **Manifest V3** - Modern Chrome Extension architecture
 
 ---
-**Architect:** Ankush Kumar Chaudhari ([@bytecraft-Y](https://github.com/bytecraft-Y))
+**Architect:** Yash Vats ([@bytecraft-Y](https://github.com/bytecraft-Y))
